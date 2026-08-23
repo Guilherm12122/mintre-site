@@ -1,6 +1,7 @@
 const header = document.querySelector('[data-header]');
 const menuButton = document.querySelector('[data-menu-button]');
 const mobileMenu = document.querySelector('[data-mobile-menu]');
+const accordionTriggers = document.querySelectorAll('.agenda-trigger');
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 function updateHeader() {
@@ -31,6 +32,21 @@ window.addEventListener('resize', () => {
 document.querySelector('[data-year]').textContent = new Date().getFullYear();
 updateHeader();
 
+accordionTriggers.forEach((trigger) => {
+  trigger.addEventListener('click', () => {
+    const expanded = trigger.getAttribute('aria-expanded') === 'true';
+    accordionTriggers.forEach((item) => {
+      item.setAttribute('aria-expanded', 'false');
+      item.nextElementSibling.hidden = true;
+    });
+
+    if (expanded) return;
+
+    trigger.setAttribute('aria-expanded', 'true');
+    trigger.nextElementSibling.hidden = false;
+  });
+});
+
 const reveals = document.querySelectorAll('.reveal');
 if (reduceMotion || !('IntersectionObserver' in window)) {
   reveals.forEach((element) => element.classList.add('visible'));
@@ -44,4 +60,3 @@ if (reduceMotion || !('IntersectionObserver' in window)) {
   }, { threshold: .12, rootMargin: '0px 0px -40px' });
   reveals.forEach((element) => observer.observe(element));
 }
-
