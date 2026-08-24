@@ -254,7 +254,7 @@ button.agenda-trigger {
 .footer-top { display: grid; grid-template-columns: 1fr 1fr .7fr; gap: 60px; align-items: start; padding-bottom: 80px; }
 .footer-brand .brand-symbol { width: 60px; height: 60px; }
 .footer-top > p { margin: 0; color: var(--gold); font: 700 clamp(32px, 4vw, 58px)/.95 var(--display); letter-spacing: -.04em; }
-.footer-social { display: grid; gap: 11px; }
+.footer-social { display: grid; justify-items: center; gap: 11px; }
 .footer-social span { margin-bottom: 8px; color: rgba(255,255,255,.4); font-size: 9px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
 .footer-social-links { display: flex; align-items: center; gap: 20px; }
 .social-link { display: inline-flex; align-items: center; justify-content: center; width: 56px; height: 56px; color: var(--white); transition: color .2s ease, transform .2s ease; }
