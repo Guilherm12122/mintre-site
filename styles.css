@@ -64,7 +64,7 @@ button { font: inherit; }
 .text-link { display: inline-flex; align-items: center; gap: 20px; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,.35); font-size: 12px; font-weight: 600; }
 .hero-visual { position: relative; min-height: 100svh; overflow: hidden; }
 .hero-visual::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, var(--ink) 0%, transparent 32%), linear-gradient(0deg, rgba(9,10,10,.85), transparent 45%); }
-.hero-visual > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 47%; transform: scale(1.5); filter: saturate(.72) contrast(1.07); }
+.hero-visual > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 47%; transform: scale(1.12); filter: saturate(.72) contrast(1.07); }
 .vertical-note { position: absolute; z-index: 2; top: 50%; right: 15px; margin: 0; transform: translateY(-50%) rotate(90deg); transform-origin: center; color: rgba(255,255,255,.58); font-size: 9px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
 .hero-scroll { position: absolute; z-index: 3; left: var(--pad); bottom: 26px; display: flex; align-items: center; gap: 11px; color: rgba(255,255,255,.4); font-size: 9px; letter-spacing: .11em; text-transform: uppercase; }
 .hero-scroll span { width: 38px; height: 1px; background: currentColor; }
