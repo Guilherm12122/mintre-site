@@ -33,6 +33,7 @@ document.querySelector('[data-year]').textContent = new Date().getFullYear();
 updateHeader();
 
 accordionTriggers.forEach((trigger) => {
+  trigger.setAttribute('aria-label', `${trigger.textContent.replace(/\s+/g, ' ').trim()} — expandir detalhes`);
   trigger.addEventListener('click', () => {
     const expanded = trigger.getAttribute('aria-expanded') === 'true';
     accordionTriggers.forEach((item) => {
@@ -40,10 +41,11 @@ accordionTriggers.forEach((trigger) => {
       item.nextElementSibling.hidden = true;
     });
 
-    if (expanded) return;
-
-    trigger.setAttribute('aria-expanded', 'true');
-    trigger.nextElementSibling.hidden = false;
+    if (!expanded) {
+      trigger.setAttribute('aria-expanded', 'true');
+      trigger.setAttribute('aria-label', `${trigger.textContent.replace(/\s+/g, ' ').trim()} — recolher detalhes`);
+      trigger.nextElementSibling.hidden = false;
+    }
   });
 });
 
