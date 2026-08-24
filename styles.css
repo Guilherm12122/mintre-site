@@ -42,9 +42,9 @@ button { font: inherit; }
 .desktop-nav a { position: relative; padding: 8px 0; }
 .desktop-nav a::after { content: ""; position: absolute; right: 0; bottom: 2px; left: 0; height: 1px; transform: scaleX(0); background: currentColor; transform-origin: right; transition: transform .25s ease; }
 .desktop-nav a:hover::after { transform: scaleX(1); transform-origin: left; }
-.header-cta { justify-self: end; display: flex; align-items: center; gap: 18px; padding: 12px 15px; border: 1px solid currentColor; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; }
-.header-cta:hover { color: var(--ink); background: var(--white); }
-.site-header.scrolled .header-cta:hover { color: var(--white); background: var(--ink); }
+.header-cta { justify-self: end; display: flex; align-items: center; gap: 18px; padding: 12px 15px; border: 1px solid currentColor; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; transition: color .25s ease, background-color .25s ease, border-color .25s ease; }
+.header-cta:hover { color: var(--ink) !important; background: var(--white) !important; border-color: var(--white); }
+.site-header.scrolled .header-cta:hover { color: var(--white) !important; background: var(--ink) !important; border-color: var(--ink); }
 .header-cta span { font-size: 16px; }
 .menu-button, .mobile-menu { display: none; }
 
