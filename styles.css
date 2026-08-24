@@ -242,11 +242,10 @@ button.agenda-trigger {
 .visit-grid { display: grid; grid-template-columns: 1fr 1.25fr; gap: 90px; margin-top: 85px; padding: 65px; background: var(--paper-deep); }
 .visit-address address { margin: 0 0 35px; font: 600 clamp(28px, 3.5vw, 52px)/1.15 var(--display); letter-spacing: -.04em; font-style: normal; }
 .visit-address address strong { color: var(--rust); font-weight: 600; }
-.visit-times { border-top: 1px solid var(--line); }
-.visit-times > div { display: grid; grid-template-columns: 1fr 1fr 1fr; align-items: center; padding: 24px 0; border-bottom: 1px solid var(--line); }
-.visit-times span { font-size: 11px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
-.visit-times strong { font: 700 clamp(30px, 3vw, 48px)/1 var(--display); }
-.visit-times small { justify-self: end; color: var(--muted); font-size: 12px; }
+.visit-welcome { align-self: center; max-width: 520px; padding-top: 8px; }
+.visit-welcome > p:not(.visit-note) { margin: 20px 0 28px; font: 600 clamp(28px, 3vw, 48px)/1.12 var(--display); letter-spacing: -.04em; }
+.visit-note { max-width: 400px; margin: 0; color: var(--muted); font-size: 14px; line-height: 1.7; }
+.visit-note a { color: var(--rust); border-bottom: 1px solid currentColor; }
 .visit-cta { display: flex; align-items: center; justify-content: space-between; gap: 30px; margin: 0 calc(var(--pad) * -1); padding: 52px var(--pad); color: var(--white); background: var(--rust); }
 .visit-cta p { margin: 0; font: 600 clamp(20px, 2.2vw, 31px) var(--display); }
 .visit-cta a { display: flex; align-items: center; gap: 45px; padding-bottom: 8px; border-bottom: 1px solid rgba(255,255,255,.55); font-size: 12px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
@@ -331,8 +330,7 @@ button.agenda-trigger {
   .leadership-copy { padding: 80px var(--pad); }
   .leadership-quote { margin-top: 55px; }
   .visit-grid { grid-template-columns: 1fr; margin-top: 50px; padding: 32px 24px; }
-  .visit-times > div { grid-template-columns: 1fr auto; }
-  .visit-times small { grid-column: 1 / -1; justify-self: start; margin-top: 6px; }
+  .visit-welcome { padding-top: 20px; }
   .visit-cta { align-items: flex-start; flex-direction: column; }
   .footer-top { grid-template-columns: 1fr; padding-bottom: 55px; }
   .footer-bottom { align-items: flex-start; flex-direction: column; gap: 8px; }
