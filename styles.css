@@ -31,7 +31,7 @@ button { font: inherit; }
 }
 .site-header.scrolled { height: 78px; color: var(--ink); background: rgba(242, 239, 231, .92); border-color: var(--line); backdrop-filter: blur(16px); }
 .brand { display: inline-flex; align-items: center; gap: 11px; width: max-content; }
-.brand-logo { width: 142px; height: 58px; flex: 0 0 auto; object-fit: fill; }
+.brand-logo { width: 142px; height: 88px; flex: 0 0 auto; object-fit: contain; }
 .brand-symbol circle { fill: transparent; stroke: currentColor; stroke-width: 1.3; }
 .brand-symbol path { fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
 .brand span { display: grid; gap: 1px; }
@@ -269,7 +269,7 @@ button.agenda-trigger {
 
 .site-footer { padding: 85px var(--pad) 24px; color: var(--white); background: var(--ink); }
 .footer-top { display: grid; grid-template-columns: 1fr 1fr .7fr; gap: 60px; align-items: start; padding-bottom: 80px; }
-.footer-brand .brand-logo { width: 180px; height: 72px; }
+.footer-brand .brand-logo { width: 180px; height: 142px; }
 .footer-top > p { margin: 0; color: var(--gold); font: 700 clamp(32px, 4vw, 58px)/.95 var(--display); letter-spacing: -.04em; }
 .footer-social { display: grid; width: 100%; gap: 11px; }
 .footer-social span { margin-bottom: 8px; color: rgba(255,255,255,.4); font-size: 9px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
