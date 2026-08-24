@@ -30,6 +30,7 @@ button { font: inherit; }
   transition: height .25s ease, background .25s ease, color .25s ease, border-color .25s ease;
 }
 .site-header.scrolled { height: 78px; color: var(--ink); background: rgba(242, 239, 231, .92); border-color: var(--line); backdrop-filter: blur(16px); }
+.site-header.scrolled .brand-logo { filter: invert(1); }
 .brand { display: inline-flex; align-items: center; gap: 11px; width: max-content; }
 .brand-logo { width: 142px; height: 88px; flex: 0 0 auto; object-fit: contain; }
 .brand-symbol circle { fill: transparent; stroke: currentColor; stroke-width: 1.3; }
