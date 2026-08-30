@@ -2,6 +2,16 @@
 
 Landing page estática e responsiva do Ministério Mintre.
 
+## Estrutura
+
+```text
+index.html          # Estrutura e conteúdo da página
+assets/
+  css/styles.css    # Estilos e responsividade
+  js/script.js      # Menu, animações e acordeão da agenda
+  images/           # Fotos, logos e demais imagens
+```
+
 ## Visualizar
 
 Na pasta do projeto, execute:
