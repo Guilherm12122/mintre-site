@@ -36,10 +36,10 @@ accordionTriggers.forEach((trigger) => {
   trigger.setAttribute('aria-label', `${trigger.textContent.replace(/\s+/g, ' ').trim()} — expandir detalhes`);
   trigger.addEventListener('click', () => {
     const expanded = trigger.getAttribute('aria-expanded') === 'true';
-    accordionTriggers.forEach((item) => {
-      item.setAttribute('aria-expanded', 'false');
-      item.nextElementSibling.hidden = true;
-    });
+    // accordionTriggers.forEach((item) => {
+    //   item.setAttribute('aria-expanded', 'false');
+    //   item.nextElementSibling.hidden = true;
+    // });
 
     if (!expanded) {
       trigger.setAttribute('aria-expanded', 'true');
