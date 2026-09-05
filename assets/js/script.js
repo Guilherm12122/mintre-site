@@ -48,17 +48,14 @@ accordionTriggers.forEach((trigger) => {
     // Check se a agenda está expandida
     const expanded = trigger.getAttribute('aria-expanded') === 'true';
 
-    // Esconde todas as outras agendas
-    // accordionTriggers.forEach((item) => {
-    //   item.setAttribute('aria-expanded', 'false');
-    //   item.nextElementSibling.hidden = true;
-    // });
-
-    // Se agenda nao está expandida ainda, expanda com os detalhes
     if (!expanded) {
       trigger.setAttribute('aria-expanded', 'true');
       trigger.setAttribute('aria-label', `${trigger.textContent.replace(/\s+/g, ' ').trim()} — recolher detalhes`);
       trigger.nextElementSibling.hidden = false;
+    } else {
+      trigger.setAttribute('aria-expanded', 'false');
+      trigger.setAttribute('aria-label', `${trigger.textContent.replace(/\s+/g, ' ').trim()} — expandir detalhes`);
+      trigger.nextElementSibling.hidden = true;
     }
   });
 
