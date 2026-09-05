@@ -32,21 +32,36 @@ window.addEventListener('resize', () => {
 document.querySelector('[data-year]').textContent = new Date().getFullYear();
 updateHeader();
 
+// Para cada topico de agenda
 accordionTriggers.forEach((trigger) => {
+
+  // Comeca escondido
+  trigger.setAttribute('aria-expanded', 'false');
+  item.nextElementSibling.hidden = true;
+
+  // Coloque uma label indicando o que PODE SER FEITO (NAO ESTÁ SENDO FEITO)
   trigger.setAttribute('aria-label', `${trigger.textContent.replace(/\s+/g, ' ').trim()} — expandir detalhes`);
+
+  // Listener para clique tópico de agenda 
   trigger.addEventListener('click', () => {
+
+    // Check se a agenda está expandida
     const expanded = trigger.getAttribute('aria-expanded') === 'true';
+
+    // Esconde todas as outras agendas
     // accordionTriggers.forEach((item) => {
     //   item.setAttribute('aria-expanded', 'false');
     //   item.nextElementSibling.hidden = true;
     // });
 
+    // Se agenda nao está expandida ainda, expanda com os detalhes
     if (!expanded) {
       trigger.setAttribute('aria-expanded', 'true');
       trigger.setAttribute('aria-label', `${trigger.textContent.replace(/\s+/g, ' ').trim()} — recolher detalhes`);
       trigger.nextElementSibling.hidden = false;
     }
   });
+
 });
 
 const reveals = document.querySelectorAll('.reveal');
