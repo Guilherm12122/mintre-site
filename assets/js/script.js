@@ -32,34 +32,32 @@ window.addEventListener('resize', () => {
 document.querySelector('[data-year]').textContent = new Date().getFullYear();
 updateHeader();
 
-// Para cada topico de agenda
-accordionTriggers.forEach((trigger) => {
+  accordionTriggers.forEach((trigger) => {
+    // Começa escondido
+    trigger.setAttribute('aria-expanded', 'false');
+    trigger.nextElementSibling.hidden = true;
 
-  // Comeca escondido
-  trigger.setAttribute('aria-expanded', 'false');
-  item.nextElementSibling.hidden = true;
+    trigger.addEventListener('click', () => {
+      const expanded =
+        trigger.getAttribute('aria-expanded') === 'true';
 
-  // Coloque uma label indicando o que PODE SER FEITO (NAO ESTÁ SENDO FEITO)
-  // trigger.setAttribute('aria-label', `${trigger.textContent.replace(/\s+/g, ' ').trim()} — expandir detalhes`);
-
-  // Listener para clique tópico de agenda 
-  trigger.addEventListener('click', () => {
-
-    // Check se a agenda está expandida
-    const expanded = trigger.getAttribute('aria-expanded') === 'true';
-
-    if (!expanded) {
-      trigger.setAttribute('aria-expanded', 'true');
-      trigger.setAttribute('aria-label', `${trigger.textContent.replace(/\s+/g, ' ').trim()} — recolher detalhes`);
-      trigger.nextElementSibling.hidden = false;
-    } else {
-      trigger.setAttribute('aria-expanded', 'false');
-      trigger.setAttribute('aria-label', `${trigger.textContent.replace(/\s+/g, ' ').trim()} — expandir detalhes`);
-      trigger.nextElementSibling.hidden = true;
-    }
+      if (!expanded) {
+        trigger.setAttribute('aria-expanded', 'true');
+        trigger.setAttribute(
+          'aria-label',
+          `${trigger.textContent.replace(/\s+/g, ' ').trim()} — recolher detalhes`
+        );
+        trigger.nextElementSibling.hidden = false;
+      } else {
+        trigger.setAttribute('aria-expanded', 'false');
+        trigger.setAttribute(
+          'aria-label',
+          `${trigger.textContent.replace(/\s+/g, ' ').trim()} — expandir detalhes`
+        );
+        trigger.nextElementSibling.hidden = true;
+      }
+    });
   });
-
-});
 
 const reveals = document.querySelectorAll('.reveal');
 if (reduceMotion || !('IntersectionObserver' in window)) {
