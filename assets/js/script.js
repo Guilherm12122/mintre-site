@@ -40,7 +40,7 @@ accordionTriggers.forEach((trigger) => {
   item.nextElementSibling.hidden = true;
 
   // Coloque uma label indicando o que PODE SER FEITO (NAO ESTÁ SENDO FEITO)
-  trigger.setAttribute('aria-label', `${trigger.textContent.replace(/\s+/g, ' ').trim()} — expandir detalhes`);
+  // trigger.setAttribute('aria-label', `${trigger.textContent.replace(/\s+/g, ' ').trim()} — expandir detalhes`);
 
   // Listener para clique tópico de agenda 
   trigger.addEventListener('click', () => {
