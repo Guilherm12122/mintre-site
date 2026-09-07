@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/css/styles.css?v=20260823-19" />
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260906-20" />
   </head>
   <body>
     <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
@@ -28,7 +28,10 @@
         <a href="https://wa.me/5511943715424" target="_blank" rel="noreferrer">Fale Conosco ↗</a>
       </nav>
 
-      <a class="header-cta" href="#visite">Planeje sua visita <span>↗</span></a>
+      <div class="header-actions">
+        <button class="login-button" type="button" data-login-open>Entrar</button>
+        <a class="header-cta" href="#visite">Planeje sua visita <span>↗</span></a>
+      </div>
       <button class="menu-button" type="button" aria-label="Abrir menu" aria-expanded="false" data-menu-button>
         <span></span><span></span>
       </button>
@@ -40,8 +43,30 @@
         <a href="#visite">Visite</a>
         <a href="https://linktr.ee/m.mintre" target="_blank" rel="noreferrer">Links ↗</a>
         <a href="https://wa.me/5511943715424" target="_blank" rel="noreferrer">Fale Conosco ↗</a>
+        <button class="mobile-login-button" type="button" data-login-open>Entrar na área da equipe ↗</button>
       </div>
     </header>
+
+    <div class="login-modal" data-login-modal hidden>
+      <div class="login-backdrop" data-login-close></div>
+      <section class="login-dialog" role="dialog" aria-modal="true" aria-labelledby="login-title">
+        <button class="login-close" type="button" aria-label="Fechar formulário de login" data-login-close>×</button>
+        <p class="eyebrow dark">Área da equipe</p>
+        <h2 id="login-title">Entrar na <em>Mintre.</em></h2>
+        <p class="login-intro">Acesse o painel para organizar os eventos e encontros da igreja.</p>
+
+        <form class="login-form" data-login-form>
+          <label for="login-email">E-mail</label>
+          <input id="login-email" name="email" type="email" autocomplete="email" placeholder="voce@exemplo.com" required />
+
+          <label for="login-password">Senha</label>
+          <input id="login-password" name="password" type="password" autocomplete="current-password" placeholder="Digite sua senha" required />
+
+          <button class="button button-dark" type="submit">Entrar <span>↗</span></button>
+        </form>
+        <p class="login-note">Autenticação em breve.</p>
+      </section>
+    </div>
 
     <main id="conteudo">
       <section class="hero" id="inicio">
@@ -339,6 +364,6 @@
       </div>
     </footer>
 
-    <script src="assets/js/script.js?v=20260823-2"></script>
+    <script src="assets/js/script.js?v=20260906-3"></script>
   </body>
 </html>
